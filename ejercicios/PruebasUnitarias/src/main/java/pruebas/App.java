@@ -1,4 +1,4 @@
-package aeropuerto;
+package pruebas;
 
 /**
  * Hello world!

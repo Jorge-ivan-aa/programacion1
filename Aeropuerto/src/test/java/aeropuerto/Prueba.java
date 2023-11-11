@@ -1,9 +1,10 @@
+package aeropuerto;
 
-public class AeropuertoPublico {
+public class Prueba {
 	
 	private String attr;
 
-	public AeropuertoPublico(Strin attr) {
+	public Prueba(String attr) {
 		this.attr = attr;	
 	}
 
@@ -19,7 +20,7 @@ public class AeropuertoPublico {
 
 // imprimir valores de atributos
 	public String toString() {
-		return 'atribute: ' + this.attr;
+		return "attribute: " + this.attr;
 	}
 }
 
