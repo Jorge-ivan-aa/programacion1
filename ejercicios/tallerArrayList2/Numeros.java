@@ -30,9 +30,31 @@ public class Numeros {
 		ArrayList<Integer> reverseNumeros = numeros;
 		Collections.sort(reverseNumeros);
 // obtener el numero mayor
-		System.out.println("De la lista, el numero mas grande es: " + reverseNumeros.get(7));
-
+		System.out.println("De la lista, el numero mas pequeño es: " + reverseNumeros.get(0));
 		System.out.println("\n-_-_-_-_\n");
+
+		for(int i=0; i<numeros.size(); i++) {
+			boolean primo = true;
+			int contador = 2;
+
+			if (numeros.get(i) % 2 == 0) {
+				primo = false;
+
+			} else {
+				while (primo == true && contador != numeros.get(i)) {
+					if (numeros.get(i) % contador == 0) {
+						primo = false;			
+					}
+					contador++;
+				}
+			}
+
+			if (primo == false) {
+				numeros.remove(i);
+			}
+		}
+		System.out.println("La lista con solo numeros primos es: " + numeros);
+
 	}	
 }
 
