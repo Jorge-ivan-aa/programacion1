@@ -1,11 +1,12 @@
 package aeropuerto.modules;
 import java.util.ArrayList;
 
-public class Piloto {
+public class Piloto extends Categoria {
     private String nombre, licencia;
     private ArrayList<Integer> listaVuelos;
 
-    public Piloto(String nombre, String licencia) {
+    public Piloto(String nombre, String licencia, String categoria) {
+        super(categoria);
         this.nombre = nombre;
         this.licencia = licencia;
         this.listaVuelos = new ArrayList<>();
@@ -15,8 +16,8 @@ public class Piloto {
         return listaVuelos;
     }
 
-    public void AsignarVuelo(int numVuelo) {
-        if(numVuelo > 0 && numVuelo < 10000000) {
+    public void AsignarVuelo(int numVuelo, String categoriaVuelo) {
+        if(numVuelo > 0 && numVuelo < 10000000 && categoriaVuelo == this.categoria) {
             this.listaVuelos.add(numVuelo);
         }
     }

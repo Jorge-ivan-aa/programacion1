@@ -1,6 +1,6 @@
 package aeropuerto.modules;
 
-public class Vuelo {
+public class Vuelo extends Categoria {
 
     enum Estado {PROGRAMADO, VOLANDO, ATERRIZADO, CANCELADO}
 
@@ -11,9 +11,9 @@ public class Vuelo {
     
     public Vuelo(int numVuelo, String aerolinea, String categoria, String terminal, String puertaEmbarque, String fechaDespegue, String fechaAterrizaje, String ruta, int numPasajeros) {
        
+        super(categoria);
         this.numVuelo = numVuelo;
         this.aerolinea = aerolinea;
-        this.categoria = categoria;
         this.estado = Estado.PROGRAMADO;
         this.terminal = terminal;
         this.puertaEmbarque = puertaEmbarque;
