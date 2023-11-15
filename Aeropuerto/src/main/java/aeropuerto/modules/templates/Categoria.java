@@ -1,6 +1,8 @@
+package aeropuerto.modules.templates;
+
 public class Categoria {
 	
-	private String categoria;
+	protected String categoria;
 
 	public Categoria(String categoria) {
 		this.categoria = categoria;

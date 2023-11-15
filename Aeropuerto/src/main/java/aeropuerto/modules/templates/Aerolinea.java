@@ -1,4 +1,4 @@
-package aeropuerto.modules;
+package aeropuerto.modules.templates;
 
 import java.util.ArrayList;
 

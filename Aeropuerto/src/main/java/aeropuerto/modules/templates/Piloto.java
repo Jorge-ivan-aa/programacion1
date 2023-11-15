@@ -1,8 +1,8 @@
-package aeropuerto.modules;
+package aeropuerto.modules.templates;
 import java.util.ArrayList;
 
 public class Piloto extends Categoria {
-    private String nombre, licencia;
+    public String nombre, licencia;
     private ArrayList<Integer> listaVuelos;
 
     public Piloto(String nombre, String licencia, String categoria) {
@@ -13,7 +13,15 @@ public class Piloto extends Categoria {
     }
 
     public ArrayList<Integer> getListaVuelos() {
-        return listaVuelos;
+        return this.listaVuelos;
+    }
+
+    public String getLicencia() {
+        return licencia;
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 
     public void AsignarVuelo(int numVuelo, String categoriaVuelo) {
@@ -23,6 +31,6 @@ public class Piloto extends Categoria {
     }
 
     public String toString() {
-        return "Nombre: " + this.nombre + "\nlicencia: " + this.licencia + "\nLista de vuelos: " + this.listaVuelos;
+        return "Nombre: " + this.nombre + "\nLicencia: " + this.licencia + "\nCategoria: " + this.categoria + "\nLista de vuelos: " + this.listaVuelos + "\n";
     }
 }
