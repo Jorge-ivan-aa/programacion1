@@ -1,25 +1,58 @@
-# Tips para aportar sin morir en el intento
+# Proyecto final: controlador de aeropuerto
 
-## 1. Antes de modificar, asegurate de sincronizar
-Si va a modificar algo, primero asegurarse de
-hacer los siguiente:
-- Avisar al otro para que no vaya a cambiar lo mismo que usted.
-- Hacer `git pull` y `git fetch`
+El proyecto final de la asignatura programación 1
+se basa en el desarrollo de un software de control 
+o gestion de vuelos para un aeropuerto. Para alcanzar
+tal objetivo se plantearon las siguientes clases:
 
-Si no ocurre ningun inconveniente, puedes empezar a modificar el proyecto.
+- **Main:** Es la clase principal donde se instancian las
+clases y se arma el menu principal desde donde se coordinan
+las funciones requeridas por el proyecto.
 
-## 2. Antes de subir cambios, avisar.
-Es importante no subir nada sin antes avisar a tu miembro
-de equipo cuales fueron los cambios realizados.
+- **Directorio:** Es la clase donde se obtiene la informacion
+de las instancias de los objetos almacenados en la clase 
+BaseDeDatos, de forma legible.
 
-## 3. Cambios que No se deben hacer
-Es importante no hacer lo siguiente:
-- No modificar el archivo `pom.xml`
-- No mover archivos a otras carpetas
-- No cambiar nada de la carpeta `target/`
+- **Modificador:** Es la clase donde se modifica o genera la 
+informacion de las instancias de los objetos almacenados en la 
+clase BaseDeDatos.
 
-## 4. Cuidado con eliminar archivos
-Si necesitas eliminar un archivo, avisar a tu miembro de equipo.
+- **BaseDeDatos:** Es la clase donde se instancian y se almacena
+la informacion de las clases Aerolinea, Piloto, Torre y Vuelo.
+Ademas, se crean listas con los objetos del mismo tipo para un facil
+acceso.
 
+- **ListaAtributos:** Se trata de una clase de utilidad que recibe
+listas de objetos y genera nueva listas con solo atributos del mismo
+tipo de ese objeto.
 
-> Sin nada mas que decir, suerte!
+- **Aerolinea, Piloto, Torre y Vuelo:** Son las clases base donde se
+crean los atributos y metodos utiles del proyecto. Con lo que mas adelante
+se va a instanciar clases para el funcionamiento correcto del controlador.
+
+# Estructura del proyecto
+```
+src
+├── main
+│   └── java
+│       └── aeropuerto
+│           ├── Main.java
+│           └── modules
+│               ├── Directorio.java
+│               ├── Modificador.java
+│               ├── objects
+│               │   ├── BaseDeDatos.java
+│               │   └── ListaAtributos.java
+│               └── templates
+│                   ├── Aerolinea.java
+│                   ├── Categoria.java
+│                   ├── Piloto.java
+│                   ├── Torre.java
+│                   └── Vuelo.java
+└── test
+    └── java
+        └── aeropuerto
+            ├── AerolineaTest.java
+            ├── PilotoTest.java
+            └── VueloTest.java
+```

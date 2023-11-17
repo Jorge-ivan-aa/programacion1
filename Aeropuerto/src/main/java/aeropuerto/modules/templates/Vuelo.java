@@ -23,6 +23,13 @@ public class Vuelo extends Categoria {
         this.numPasajeros = numPasajeros;
     }
 
+    public int getNumVuelo() {
+        return this.numVuelo;
+    }
+    public String getEstado() {
+        return this.estado.toString();
+    }
+
     public void setVolando() {
         this.estado = Estado.VOLANDO;
     }
@@ -36,10 +43,10 @@ public class Vuelo extends Categoria {
     }
     
     public String toString() {
-        return "Numero de vuelo: " + this.numVuelo + "aerolinea: " + this.aerolinea + "categoria: " +
+        return "\n\nNumero de vuelo: " + this.numVuelo + "aerolinea: " + this.aerolinea + "categoria: " +
         this.categoria + "estado: " + this.estado + "terminal: " + this.terminal + "puertaEmbarque: " + 
         this.puertaEmbarque + "fechaDespegue: " + this.fechaDespegue +"fechaAterrizaje: " + 
         this.fechaAterrizaje + "ruta: " + this.ruta + "numVuelo: " + this.numVuelo + 
-        "numPasajeros: " + this.numPasajeros;
+        "numPasajeros: " + this.numPasajeros + "\n\n";
     }
 }

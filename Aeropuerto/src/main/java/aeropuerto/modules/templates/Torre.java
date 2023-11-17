@@ -17,6 +17,10 @@ public class Torre {
         return listaVuelos;
     }
 
+    public String getId() {
+        return id;
+    }
+
     public void AsignarVuelo(int numVuelo) {
         if(numVuelo > 0 && numVuelo < 10000000) {
             this.listaVuelos.add(numVuelo);
