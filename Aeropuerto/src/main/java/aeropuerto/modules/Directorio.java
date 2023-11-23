@@ -8,6 +8,11 @@ import aeropuerto.modules.templates.*;
 
 public class Directorio extends ListaAtributos {
 
+    public Directorio() {
+
+    }
+
+// Metodo para consultar los vuelos que tiene un piloto
     public void vuelosPilotos(ArrayList<Piloto> pilotos) {
 
         Scanner input = new Scanner(System.in);
@@ -33,6 +38,7 @@ public class Directorio extends ListaAtributos {
         System.out.println("Los vuelos correspondientes al piloto, son: \n" + pilotos.get(key).getListaVuelos() + "\n");
     }
 
+// Metodo para consultar los vuelos que vigila x torre de control
     public void vuelosTorres(ArrayList<Torre> torres){
         Scanner input = new Scanner(System.in);
         boolean condicional = true;
@@ -61,6 +67,7 @@ public class Directorio extends ListaAtributos {
 
     }
 
+// Metodo para consultar los vuelos que maneja x aerolinea y obtiener sus estados
      public void vuelosAerolineas(ArrayList<Aerolinea> aerolineas){
         Scanner input = new Scanner(System.in);
         boolean condicional = true;
@@ -77,7 +84,6 @@ public class Directorio extends ListaAtributos {
         
                 if (nombre.equals(nombreAerolineas(aerolineas).get(i))) {
                     condicional = false;
-                    //input.close();
                     key = i;
                 }
             }    
@@ -101,10 +107,9 @@ public class Directorio extends ListaAtributos {
             }
         }
     }
-
+// Metodo que consulta todos los vuelos actuales y su informacion.
     public void showVuelos(ArrayList<Vuelo> vuelos) {
-        System.out.println("La Lista de vuelos es: " + numVuelos(vuelos));
+        System.out.println("Lista de vuelos actuales: \n" + numVuelos(vuelos) + "\n");
     }
-
 
 }

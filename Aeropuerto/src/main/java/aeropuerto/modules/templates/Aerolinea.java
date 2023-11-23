@@ -22,8 +22,4 @@ public class Aerolinea {
     public void setVuelos(Vuelo vuelo) {
         this.listaVuelos.add(vuelo);
     }
-
-    public String toString() {
-        return "Nombre: " + this.nombre + "\nLista de vuelos: " + this.listaVuelos;
-    }
 }

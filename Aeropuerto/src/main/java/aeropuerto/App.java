@@ -4,14 +4,14 @@ import java.util.Scanner;
 import aeropuerto.modules.*;
 import aeropuerto.modules.objects.*;
 
-public class Main {
+public class App {
     public static void main( String[] args ) {
         Scanner input = new Scanner(System.in);
         BaseDeDatos datos = new BaseDeDatos();
         Directorio directorio = new Directorio();
         Modificador modificador = new Modificador();
 
-        System.out.println("Bienvenido al controlador aereo del Aeropuerto XXXX");
+        System.out.println("### Bienvenido al controlador aereo del Aeropuerto XXXX ###");
 
         int menu = 0;
         String[] opt = {
@@ -29,7 +29,7 @@ public class Main {
         boolean condition = true;
         while (condition) {
             System.out.println("\n-_-_-_-_-_-_-_-_\n");
-            System.out.println("Seleccione una opcion del menu: " + opt[0] + opt[1]+ opt[2] + opt[3]+ opt[4] + opt[5] + opt[6] + opt[7]);
+            System.out.println("Seleccione una opcion del menu: " + opt[0] + opt[1]+ opt[2] + opt[3]+ opt[4] + opt[5] + opt[6] + opt[7] + opt[8]);
             menu = input.nextInt();
 
             switch (menu) {

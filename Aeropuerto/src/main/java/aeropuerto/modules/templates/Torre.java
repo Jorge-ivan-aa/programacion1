@@ -21,13 +21,21 @@ public class Torre {
         return id;
     }
 
-    public void AsignarVuelo(int numVuelo) {
-        if(numVuelo > 0 && numVuelo < 10000000) {
-            this.listaVuelos.add(numVuelo);
-        }
+    public String getUbicacion() {
+        return ubicacion;
     }
 
-    public String toString() {
-        return "Id torre: " + this.id + "\nUbicación: " + this.ubicacion + "\nCorreo: " + this.correo + "\nTelefono: " + this.telefono + "\nVuelos supervisados: " + this.listaVuelos;
+    public String getCorreo() {
+        return correo;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void AsignarVuelo(int numVuelo) {
+        if(numVuelo > 0 && numVuelo < 1000000) {
+            this.listaVuelos.add(numVuelo);
+        }
     }
 }

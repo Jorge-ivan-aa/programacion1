@@ -32,8 +32,4 @@ public class Piloto extends Categoria {
             System.out.println("El piloto no pertenece a la categoria de vuelo:" + categoriaVuelo);
         }
     }
-
-//    public String toString() {
-  //      return "Nombre: " + this.nombre + "\nLicencia: " + this.licencia + "\nCategoria: " + this.categoria + "\nLista de vuelos: " + this.listaVuelos + "\n";
-    //}
 }

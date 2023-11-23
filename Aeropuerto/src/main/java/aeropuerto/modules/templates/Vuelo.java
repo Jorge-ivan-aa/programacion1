@@ -42,7 +42,7 @@ public class Vuelo extends Categoria {
         this.estado = Estado.CANCELADO;
     }
     
-    public String toString() {
+    public String infoVuelo() {
         return "\n\nNumero de vuelo: " + this.numVuelo + "aerolinea: " + this.aerolinea + "categoria: " +
         this.categoria + "estado: " + this.estado + "terminal: " + this.terminal + "puertaEmbarque: " + 
         this.puertaEmbarque + "fechaDespegue: " + this.fechaDespegue +"fechaAterrizaje: " + 
